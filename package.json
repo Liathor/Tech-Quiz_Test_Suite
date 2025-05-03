@@ -17,6 +17,7 @@
     "cypress": "npx cypress open",
     "test": "npm run test:e2e && npm run test:component",
     "cypress:component": "npx cypress open --component",
+    "cypress:e2e": "npx cypress open --e2e",
     "test:e2e": "npx cypress run --browser electron --headless",
     "test:component": "npx cypress run --component --browser electron --headless"
   },
