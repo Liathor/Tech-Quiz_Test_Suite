@@ -3,10 +3,18 @@ import customViteConfig from './vite.config';
 
 export default defineConfig({
   component: {
+
     devServer: {
       framework: 'react',
       bundler: 'vite',
-      viteConfig: customViteConfig,
+      viteConfig: {
+        ...customViteConfig,
+        server: {
+          ...(customViteConfig.server || {}),
+          port: 3002,
+          host: 'localhost',
+        },
+      }
     },
     specPattern: "cypress/component/**/*.cy.{js,ts,jsx,tsx}",
   },
